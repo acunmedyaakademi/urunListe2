@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ürün Listeleme</title>
+  <link rel="stylesheet" href="assets/css/urun.css">
+  <script src="assets/js/urun.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="productsHeader">
+      <h1>Ürünler</h1>
+      <button id="addProductBtn">Ekle</button>
+    </header>
+
+    <div class="products" id="productsContainer"></div>
+  </div>
+
+  <dialog id="modal">
+    <h2 class="modelAddNew">Ürün Ekle</h2>
+    <h2 class="modelEdit">Ürün Düzenle</h2>
+    <form method="dialog" autocomplete="off" class="product" id="addProductForm">
+      <label for="name"> Ürün Adı</label>
+      <input type="text" name="name">
+
+      <label for="price"> Ürün Fiyatı</label>
+      <input type="number" name="price">
+
+      <label for="category">Ürün Kategorisi Seçiniz</label>
+      <select name="category" id="film">
+        <option disabled selected value="">Bir kategori seçiniz</option>
+        <option value="Elektronik">Elektronik</option>
+        <option value="Giyim">Giyim</option>
+        <option value="Teknoloji">Teknoloji</option>
+        <option value="Ev ve Mutfak">Ev ve Mutfak</option>
+        <option value="Aksesuarlar">Aksesuarlar</option>
+      </select>
+
+      <label for="description"> Ürün Açıklaması</label>
+      <input type="text" name="description">
+
+      <label for="image"> Görsel</label>
+      <input type="text" name="image">
+
+      <p>
+        <button class="modelAddNew">Ekle</button><button class="modelEdit">Kaydet</button> <button type="button"
+          onclick="addProductForm.reset();modal.close();">Vazgeç</button>
+      </p>
+
+      </p>
+      <input type="hidden" name="id" value="">
+
+    </form>
+  </dialog>
+</body>
+
+</html>
